@@ -1,6 +1,7 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 .header {
-  position: relative;
+  position: fixed;
+  z-index: 50;
   background-color: #E5E5E5;
   width: 100%;
   min-height: 70px;
@@ -29,10 +30,18 @@ img {
 }
 
 .menu-open {
+  position: absolute;
+  top: 30%;
+  left: 50%;
   display: block;
   background-color: transparent;
   border: none;
-  color: #487996;
+  fill: #487996;
+}
+
+.menu-open__wrap {
+  display: flex;
+  justify-content: center;
 }
 
 .icon-menu {
@@ -49,6 +58,16 @@ img {
   background-color: #E5E5E5;
 }
 
+.menu-close {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  display: block;
+  background-color: transparent;
+  border: none;
+  fill: #487996;
+}
+
 .nav-menu__content {
   text-align: center;
 }
@@ -57,7 +76,9 @@ img {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  stroke: 1px solid #487996;
+  color: #E5E5E5;
+  text-shadow: -2px -2px 0 #487996, -2px -2px 0 #487996, -2px 2px 0 #487996, 2px 2px 0 #487996;
+  -webkit-text-stroke-color: #487996;
 }
 
 .nav-menu__word {
@@ -67,9 +88,12 @@ img {
 }
 
 .contacts-button {
+  position: absolute;
+  top: 35%;
+  left: 70%;
   border: none;
   background-color: transparent;
-  color: #487996;
+  fill: #487996;
 }
 
 .contacts {
@@ -103,12 +127,12 @@ img {
 
 .figure-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 35%;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.01em;
+  color: #BDBDBD;
 }/*# sourceMappingURL=index.css.map */
